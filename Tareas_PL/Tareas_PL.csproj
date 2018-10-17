@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F3803F9F-1187-48E2-854D-53138CF2C90F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tareas_PL</RootNamespace>
+    <AssemblyName>Tareas_PL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Pantallas\Frm_Arreglo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Frm_Arreglo.Designer.cs">
+      <DependentUpon>Frm_Arreglo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Frm_Cifras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Frm_Cifras.Designer.cs">
+      <DependentUpon>Frm_Cifras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Frm_Contador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Frm_Contador.Designer.cs">
+      <DependentUpon>Frm_Contador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Frm_Ecuaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Frm_Ecuaciones.Designer.cs">
+      <DependentUpon>Frm_Ecuaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Frm_Ecuaciones_Cuadraticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Frm_Ecuaciones_Cuadraticas.Designer.cs">
+      <DependentUpon>Frm_Ecuaciones_Cuadraticas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Frm_Fecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Frm_Fecha.Designer.cs">
+      <DependentUpon>Frm_Fecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Frm_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Frm_Menu.Designer.cs">
+      <DependentUpon>Frm_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Frm_Notas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Frm_Notas.Designer.cs">
+      <DependentUpon>Frm_Notas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Frm_Rifa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Frm_Rifa.Designer.cs">
+      <DependentUpon>Frm_Rifa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Frm_Sumatoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Frm_Sumatoria.Designer.cs">
+      <DependentUpon>Frm_Sumatoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Frm_Tabla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Frm_Tabla.Designer.cs">
+      <DependentUpon>Frm_Tabla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Pantallas\Frm_Menu.resx">
+      <DependentUpon>Frm_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tareas_BLL\Tareas_BLL.csproj">
+      <Project>{5652ea47-c703-4c22-aa26-058eeb6f632c}</Project>
+      <Name>Tareas_BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tareas_DAL\Tareas_DAL.csproj">
+      <Project>{477c2ca6-7af8-4d2a-9fe0-c0f2a881e742}</Project>
+      <Name>Tareas_DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Recursos\Documentos\" />
+    <Folder Include="Recursos\Imagenes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+    <Content Include="Recursos\Iconos\Apps-libreoffice-math-icon_31774.ico" />
+    <Content Include="Recursos\Iconos\businessapplication_distributor_report_document_negocio_2319.ico" />
+    <Content Include="Recursos\Iconos\Clock-icon.png" />
+    <Content Include="Recursos\Iconos\evaluation.png" />
+    <Content Include="Recursos\Iconos\exit.png" />
+    <Content Include="Recursos\Iconos\inventory-maintenance-icon.png" />
+    <Content Include="Recursos\Iconos\libreoffice-math-icon.png" />
+    <Content Include="Recursos\Iconos\math.png" />
+    <Content Include="Recursos\Iconos\process.png" />
+    <Content Include="Recursos\Iconos\table-add-icon.png" />
+    <Content Include="Recursos\Iconos\taskboardflat_106022.ico" />
+    <None Include="Resources\table-add-icon.png" />
+    <None Include="Resources\process.png" />
+    <None Include="Resources\libreoffice-math-icon.png" />
+    <None Include="Resources\inventory-maintenance-icon.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\evaluation.png" />
+    <None Include="Resources\Clock-icon.png" />
+    <None Include="Resources\math.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
