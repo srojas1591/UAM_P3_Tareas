@@ -40,18 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL_Arreglo\Cls_Arreglo_BLL.cs" />
+    <Compile Include="BLL_Ecuacion\Cls_Ecuacion_BLL.cs" />
+    <Compile Include="BLL_Ecuacion_Cuadratica\Cls_Ecuacion_Cuadratica_BLL.cs" />
+    <Compile Include="BLL_Notas\Cls_Notas_BLL.cs" />
+    <Compile Include="BLL_Sumatoria\Cls_Sumatoria_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BLL_Arreglo\" />
     <Folder Include="BLL_Cifras\" />
     <Folder Include="BLL_Contador\" />
-    <Folder Include="BLL_Ecuacion\" />
-    <Folder Include="BLL_Ecuacion_Cuadratica\" />
     <Folder Include="BLL_Fecha\" />
-    <Folder Include="BLL_Notas\" />
     <Folder Include="BLL_Rifa\" />
-    <Folder Include="BLL_Sumatoria\" />
     <Folder Include="BLL_Tabla\" />
   </ItemGroup>
   <ItemGroup>

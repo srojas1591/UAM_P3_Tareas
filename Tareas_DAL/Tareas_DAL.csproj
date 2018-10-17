@@ -40,18 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL_Arreglo\Cls_Arreglo_DAL.cs" />
+    <Compile Include="DAL_Ecuacion\Cls_Ecuacion_DAL.cs" />
+    <Compile Include="DAL_Ecuacion_Cuadratica\Cls_Ecuacion_Cuadratica_DAL.cs" />
+    <Compile Include="DAL_Notas\Cls_Notas_DAL.cs" />
+    <Compile Include="DAL_Sumatoria\Cls_Sumatoria_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DAL_Arreglo\" />
     <Folder Include="DAL_Cifras\" />
     <Folder Include="DAL_Contador\" />
-    <Folder Include="DAL_Ecuacion\" />
-    <Folder Include="DAL_Ecuacion_Cuadratica\" />
     <Folder Include="DAL_Fecha\" />
-    <Folder Include="DAL_Notas\" />
     <Folder Include="DAL_Rifa\" />
-    <Folder Include="DAL_Sumatoria\" />
     <Folder Include="DAL_Tabla\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
