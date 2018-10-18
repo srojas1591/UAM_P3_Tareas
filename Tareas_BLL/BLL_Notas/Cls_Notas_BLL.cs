@@ -37,6 +37,9 @@ namespace Tareas_BLL.BLL_Notas
 
         }
 
+
+
+
         public void EcuacionPrimerGrado(ref Cls_Notas_DAL Obj_Datos_EcuacionPrimerGrado)
         {
             if (Obj_Datos_EcuacionPrimerGrado.fvariable_a != 0)

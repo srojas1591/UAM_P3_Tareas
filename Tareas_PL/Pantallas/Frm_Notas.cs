@@ -35,6 +35,7 @@ namespace Tareas_PL.Pantallas
             }
             errorProvider1.Clear();
         }
+        
 
         private void Frm_Notas_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -53,6 +54,7 @@ namespace Tareas_PL.Pantallas
             Cls_Notas_BLL Obj_Calculos_BLL = new Cls_Notas_BLL();
             Cls_Notas_DAL Obj_Datos_DAL = new Cls_Notas_DAL();
 
+            // TODO PREVENIR QUE LOS CAMPOS VAYAN VACIOS
 
             Obj_Datos_DAL.Bporcent_parcial1 = Convert.ToByte(txt_porcent_parcial1.Text);
             Obj_Datos_DAL.Bporcent_parcial2 = Convert.ToByte(txt_porcent_parcial2.Text);
@@ -73,14 +75,75 @@ namespace Tareas_PL.Pantallas
             Obj_Datos_DAL.bparcial2 = Convert.ToByte(txt_parcial2.Text);
             Obj_Datos_DAL.bparcial3 = Convert.ToByte(txt_parcial3.Text);
 
-            Obj_Calculos_BLL.Quices(ref Obj_Datos_DAL);
-            Obj_Calculos_BLL.Tareas(ref Obj_Datos_DAL);
+            if (Obj_Datos_DAL.Bporcent_tarea + Obj_Datos_DAL.Bporcent_quices + Obj_Datos_DAL.Bporcent_parcial1 + Obj_Datos_DAL.Bporcent_parcial2 + Obj_Datos_DAL.Bporcent_parcial3 > 100)
+            {
+                MessageBox.Show("La sumatoria de los porcentajes debe ser 100");
+                txt_porcent_parcial1.Text = "0";
+                txt_porcent_parcial2.Text = "0";
+                txt_porcent_parcial3.Text = "0";
+                txt_porcent_quices.Text = "0";
+                txt_porcent_tareas.Text = "0";
+                errorProvider1.SetError(this.txt_porcent_parcial1, "El valor digitado no debe ser mayor a 100");
+                errorProvider1.SetError(this.txt_porcent_parcial2, "El valor digitado no debe ser mayor a 100");
+                errorProvider1.SetError(this.txt_porcent_parcial3, "El valor digitado no debe ser mayor a 100");
+                errorProvider1.SetError(this.txt_porcent_quices, "El valor digitado no debe ser mayor a 100");
+                errorProvider1.SetError(this.txt_porcent_tareas, "El valor digitado no debe ser mayor a 100");
+
+                return;
+            }else if (Obj_Datos_DAL.bquiz1 + Obj_Datos_DAL.bquiz2 + Obj_Datos_DAL.bquiz3 > 100)
+            {
+                MessageBox.Show("La sumatoria de los Quices debe ser 100");
+                txt_quiz1.Text = "0";
+                txt_quiz2.Text = "0";
+                txt_quiz3.Text = "0";
+                errorProvider1.SetError(this.txt_quiz1, "El valor digitado no debe ser mayor a 100");
+                errorProvider1.SetError(this.txt_quiz2, "El valor digitado no debe ser mayor a 100");
+                errorProvider1.SetError(this.txt_quiz3, "El valor digitado no debe ser mayor a 100");
+                return;
+
+            } else if (Obj_Datos_DAL.btarea1 + Obj_Datos_DAL.btarea2 + Obj_Datos_DAL.btarea3 + Obj_Datos_DAL.btarea4 > 100)
+            {
+                MessageBox.Show("La sumatoria de las Tarea debe ser 100");
+                txt_tarea1.Text = "0";
+                txt_tarea2.Text = "0";
+                txt_tarea3.Text = "0";
+                txt_tarea4.Text = "0";
+                errorProvider1.SetError(this.txt_tarea1, "El valor digitado no debe ser mayor a 100");
+                errorProvider1.SetError(this.txt_tarea2, "El valor digitado no debe ser mayor a 100");
+                errorProvider1.SetError(this.txt_tarea3, "El valor digitado no debe ser mayor a 100");
+                errorProvider1.SetError(this.txt_tarea4, "El valor digitado no debe ser mayor a 100");
+                return;
+
+            }else if (Obj_Datos_DAL.bparcial1 + Obj_Datos_DAL.bparcial2 + Obj_Datos_DAL.bparcial3 > 100)
+            {
+                MessageBox.Show("La sumatoria de los Examenes debe ser 100");
+                txt_parcial1.Text = "0";
+                txt_parcial2.Text = "0";
+                txt_parcial3.Text = "0";
+                errorProvider1.SetError(this.txt_parcial1, "El valor digitado no debe ser mayor a 100");
+                errorProvider1.SetError(this.txt_parcial2, "El valor digitado no debe ser mayor a 100");
+                errorProvider1.SetError(this.txt_parcial3, "El valor digitado no debe ser mayor a 100");
+                return;
+            }
+            
+            else
+                errorProvider1.Clear();
+            
+            {
+                
+
+                Obj_Calculos_BLL.Quices(ref Obj_Datos_DAL);
+                Obj_Calculos_BLL.Tareas(ref Obj_Datos_DAL);
 
 
-            txt_nota_quices.Text = Obj_Datos_DAL.ftotalquiz.ToString("f2");
-            txt_nota_tareas.Text = Obj_Datos_DAL.ftotaltarea.ToString("f2");
+                txt_nota_quices.Text = Obj_Datos_DAL.ftotalquiz.ToString("f2");
+                txt_nota_tareas.Text = Obj_Datos_DAL.ftotaltarea.ToString("f2");
 
-            txt_nota_final.Text = (Obj_Datos_DAL.ftotaltarea * Obj_Datos_DAL.Bporcent_tarea / 100 + Obj_Datos_DAL.ftotalquiz * Obj_Datos_DAL.Bporcent_quices / 100 + Obj_Datos_DAL.bparcial1 * Obj_Datos_DAL.Bporcent_parcial1 / 100 + Obj_Datos_DAL.bparcial2 * Obj_Datos_DAL.Bporcent_parcial2 / 100 + Obj_Datos_DAL.bparcial3 * Obj_Datos_DAL.Bporcent_parcial3 / 100).ToString("F2");
+                txt_nota_final.Text = (Obj_Datos_DAL.ftotaltarea * Obj_Datos_DAL.Bporcent_tarea / 100 + Obj_Datos_DAL.ftotalquiz * Obj_Datos_DAL.Bporcent_quices / 100 + Obj_Datos_DAL.bparcial1 * Obj_Datos_DAL.Bporcent_parcial1 / 100 + Obj_Datos_DAL.bparcial2 * Obj_Datos_DAL.Bporcent_parcial2 / 100 + Obj_Datos_DAL.bparcial3 * Obj_Datos_DAL.Bporcent_parcial3 / 100).ToString("F2");
+            }
+
+
+            
         }
 
         private void btn_CerrarVentana_Click(object sender, EventArgs e)
@@ -99,38 +162,145 @@ namespace Tareas_PL.Pantallas
         private void txt_porcent_tareas_KeyPress(object sender, KeyPressEventArgs e)
 
         {
-
-            if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "\\d+")) e.Handled = true;
-
+            char c = e.KeyChar;
+            if ((!char.IsDigit(c) ||
+                Convert.ToInt32(txt_porcent_tareas.Text + e.KeyChar) >= 101 ||
+                txt_porcent_tareas.Text == "0") && c != '\b')
+                e.Handled = true;
         }
-
 
         private void txt_porcent_parcial1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "\\d+")) e.Handled = true;
+            char c = e.KeyChar;
+            if ((!char.IsDigit(c) ||
+                Convert.ToInt32(txt_porcent_parcial1.Text + e.KeyChar) >= 101 ||
+                txt_porcent_parcial1.Text == "0") && c != '\b')
+                e.Handled = true;
         }
 
         private void txt_porcent_quices_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "\\d+")) e.Handled = true;
+            char c = e.KeyChar;
+            if ((!char.IsDigit(c) ||
+                Convert.ToInt32(txt_porcent_quices.Text + e.KeyChar) >= 101 ||
+                txt_porcent_quices.Text == "0") && c != '\b')
+                e.Handled = true;
         }
 
         private void txt_porcent_parcial2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "\\d+")) e.Handled = true;
+            char c = e.KeyChar;
+            if ((!char.IsDigit(c) ||
+                Convert.ToInt32(txt_porcent_parcial2.Text + e.KeyChar) >= 101 ||
+                txt_porcent_parcial2.Text == "0") && c != '\b')
+                e.Handled = true;
         }
 
         private void txt_porcent_parcial3_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "\\d+")) e.Handled = true;
+            char c = e.KeyChar;
+            if ((!char.IsDigit(c) ||
+                Convert.ToInt32(txt_porcent_parcial3.Text + e.KeyChar) >= 101 ||
+                txt_porcent_parcial3.Text == "0") && c != '\b')
+                e.Handled = true;
+        }
+
+        private void txt_quiz1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+            if ((!char.IsDigit(c) ||
+                Convert.ToInt32(txt_quiz1.Text + e.KeyChar) >= 101 ||
+                txt_quiz1.Text == "0") && c != '\b')
+                e.Handled = true;
+        }
+
+        private void txt_quiz2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+            if ((!char.IsDigit(c) ||
+                Convert.ToInt32(txt_quiz2.Text + e.KeyChar) >= 101 ||
+                txt_quiz2.Text == "0") && c != '\b')
+                e.Handled = true;
+        }
+
+        private void txt_quiz3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+            if ((!char.IsDigit(c) ||
+                Convert.ToInt32(txt_quiz3.Text + e.KeyChar) >= 101 ||
+                txt_quiz3.Text == "0") && c != '\b')
+                e.Handled = true;
+        }
+
+        private void txt_tarea1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+            if ((!char.IsDigit(c) ||
+                Convert.ToInt32(txt_tarea1.Text + e.KeyChar) >= 101 ||
+                txt_tarea1.Text == "0") && c != '\b')
+                e.Handled = true;
+        }
+
+        private void txt_tarea2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+            if ((!char.IsDigit(c) ||
+                Convert.ToInt32(txt_tarea2.Text + e.KeyChar) >= 101 ||
+                txt_tarea2.Text == "0") && c != '\b')
+                e.Handled = true;
+        }
+
+        private void txt_tarea3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+            if ((!char.IsDigit(c) ||
+                Convert.ToInt32(txt_tarea3.Text + e.KeyChar) >= 101 ||
+                txt_tarea3.Text == "0") && c != '\b')
+                e.Handled = true;
+        }
+
+        private void txt_tarea4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+            if ((!char.IsDigit(c) ||
+                Convert.ToInt32(txt_tarea4.Text + e.KeyChar) >= 101 ||
+                txt_tarea4.Text == "0") && c != '\b')
+                e.Handled = true;
+        }
+
+        private void txt_parcial1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+            if ((!char.IsDigit(c) ||
+                Convert.ToInt32(txt_parcial1.Text + e.KeyChar) >= 101 ||
+                txt_parcial1.Text == "0") && c != '\b')
+                e.Handled = true;
+        }
+
+        private void txt_parcial2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+            if ((!char.IsDigit(c) ||
+                Convert.ToInt32(txt_parcial2.Text + e.KeyChar) >= 101 ||
+                txt_parcial2.Text == "0") && c != '\b')
+                e.Handled = true;
+        }
+
+
+
+        private void txt_parcial3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+            if ((!char.IsDigit(c) ||
+                Convert.ToInt32(txt_parcial3.Text + e.KeyChar) >= 101 ||
+                txt_parcial3.Text == "0") && c != '\b')
+                e.Handled = true;
         }
         #endregion
 
         #region TextChanged
         private void txt_porcent_tareas_TextChanged(object sender, EventArgs e)
         {
-
-
         }
 
         private void txt_porcent_quices_TextChanged(object sender, EventArgs e)
@@ -155,96 +325,55 @@ namespace Tareas_PL.Pantallas
 
         private void txt_quiz1_TextChanged(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txt_quiz1.Text))
-            {
-                txt_quiz1.Text = "0";
-            }
+           
         }
 
         private void txt_quiz2_TextChanged(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txt_quiz2.Text))
-            {
-                txt_quiz2.Text = "0";
-            }
+            
         }
 
         private void txt_quiz3_TextChanged(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txt_quiz3.Text))
-            {
-                txt_quiz3.Text = "0";
-            }
+            
         }
 
         private void txt_tarea1_TextChanged(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txt_tarea1.Text))
-            {
-                txt_tarea1.Text = "0";
-            }
+            
         }
 
         private void txt_tarea2_TextChanged(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txt_tarea2.Text))
-            {
-                txt_tarea2.Text = "0";
-            }
+           
         }
 
         private void txt_tarea3_TextChanged(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txt_tarea3.Text))
-            {
-                txt_tarea3.Text = "0";
-            }
+            
         }
 
         private void txt_tarea4_TextChanged(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txt_tarea4.Text))
-            {
-                txt_tarea4.Text = "0";
-            }
+            
         }
 
         private void txt_parcial1_TextChanged(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txt_parcial1.Text))
-            {
-                txt_parcial1.Text = "0";
-            }
+           
         }
 
         private void txt_parcial2_TextChanged(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txt_parcial2.Text))
-            {
-                txt_parcial2.Text = "0";
-            }
+            
         }
 
         private void txt_parcial3_TextChanged(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txt_parcial3.Text))
-            {
-                txt_parcial3.Text = "0";
-            }
         }
 
         #endregion
 
-        private void txt_porcent_tareas_Validated(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_porcent_tareas_Validating(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        
+       
     }
 }

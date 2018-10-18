@@ -99,14 +99,14 @@
             this.grb_Porcentajes_Evaluacion.Margin = new System.Windows.Forms.Padding(2);
             this.grb_Porcentajes_Evaluacion.Name = "grb_Porcentajes_Evaluacion";
             this.grb_Porcentajes_Evaluacion.Padding = new System.Windows.Forms.Padding(2);
-            this.grb_Porcentajes_Evaluacion.Size = new System.Drawing.Size(376, 97);
+            this.grb_Porcentajes_Evaluacion.Size = new System.Drawing.Size(432, 97);
             this.grb_Porcentajes_Evaluacion.TabIndex = 10;
             this.grb_Porcentajes_Evaluacion.TabStop = false;
             this.grb_Porcentajes_Evaluacion.Text = "Porcentajes de Evaluación";
             // 
             // txt_porcent_parcial3
             // 
-            this.txt_porcent_parcial3.Location = new System.Drawing.Point(320, 28);
+            this.txt_porcent_parcial3.Location = new System.Drawing.Point(349, 44);
             this.txt_porcent_parcial3.MaxLength = 3;
             this.txt_porcent_parcial3.Name = "txt_porcent_parcial3";
             this.txt_porcent_parcial3.Size = new System.Drawing.Size(46, 21);
@@ -168,13 +168,11 @@
             this.txt_porcent_tareas.UseStyleColors = true;
             this.txt_porcent_tareas.TextChanged += new System.EventHandler(this.txt_porcent_tareas_TextChanged);
             this.txt_porcent_tareas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_porcent_tareas_KeyPress);
-            this.txt_porcent_tareas.Validating += new System.ComponentModel.CancelEventHandler(this.txt_porcent_tareas_Validating);
-            this.txt_porcent_tareas.Validated += new System.EventHandler(this.txt_porcent_tareas_Validated);
             // 
             // Txt_pn1_Parcial3
             // 
             this.Txt_pn1_Parcial3.AutoSize = true;
-            this.Txt_pn1_Parcial3.Location = new System.Drawing.Point(250, 32);
+            this.Txt_pn1_Parcial3.Location = new System.Drawing.Point(279, 44);
             this.Txt_pn1_Parcial3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Txt_pn1_Parcial3.Name = "Txt_pn1_Parcial3";
             this.Txt_pn1_Parcial3.Size = new System.Drawing.Size(65, 15);
@@ -236,7 +234,7 @@
             this.grb_Notas_Quices.Margin = new System.Windows.Forms.Padding(2);
             this.grb_Notas_Quices.Name = "grb_Notas_Quices";
             this.grb_Notas_Quices.Padding = new System.Windows.Forms.Padding(2);
-            this.grb_Notas_Quices.Size = new System.Drawing.Size(377, 93);
+            this.grb_Notas_Quices.Size = new System.Drawing.Size(433, 93);
             this.grb_Notas_Quices.TabIndex = 11;
             this.grb_Notas_Quices.TabStop = false;
             this.grb_Notas_Quices.Text = "Notas Quices";
@@ -244,7 +242,7 @@
             // txt_nota_quices
             // 
             this.txt_nota_quices.Enabled = false;
-            this.txt_nota_quices.Location = new System.Drawing.Point(320, 43);
+            this.txt_nota_quices.Location = new System.Drawing.Point(350, 43);
             this.txt_nota_quices.Name = "txt_nota_quices";
             this.txt_nota_quices.Size = new System.Drawing.Size(46, 21);
             this.txt_nota_quices.Style = MetroFramework.MetroColorStyle.Green;
@@ -254,7 +252,7 @@
             // 
             // txt_quiz3
             // 
-            this.txt_quiz3.Location = new System.Drawing.Point(180, 39);
+            this.txt_quiz3.Location = new System.Drawing.Point(205, 43);
             this.txt_quiz3.MaxLength = 3;
             this.txt_quiz3.Name = "txt_quiz3";
             this.txt_quiz3.Size = new System.Drawing.Size(46, 21);
@@ -263,6 +261,7 @@
             this.txt_quiz3.Text = "0";
             this.txt_quiz3.UseStyleColors = true;
             this.txt_quiz3.TextChanged += new System.EventHandler(this.txt_quiz3_TextChanged);
+            this.txt_quiz3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_quiz3_KeyPress);
             // 
             // txt_quiz2
             // 
@@ -275,6 +274,7 @@
             this.txt_quiz2.Text = "0";
             this.txt_quiz2.UseStyleColors = true;
             this.txt_quiz2.TextChanged += new System.EventHandler(this.txt_quiz2_TextChanged);
+            this.txt_quiz2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_quiz2_KeyPress);
             // 
             // txt_quiz1
             // 
@@ -287,11 +287,12 @@
             this.txt_quiz1.Text = "0";
             this.txt_quiz1.UseStyleColors = true;
             this.txt_quiz1.TextChanged += new System.EventHandler(this.txt_quiz1_TextChanged);
+            this.txt_quiz1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_quiz1_KeyPress);
             // 
             // lbl_Nota_quices
             // 
             this.lbl_Nota_quices.AutoSize = true;
-            this.lbl_Nota_quices.Location = new System.Drawing.Point(242, 45);
+            this.lbl_Nota_quices.Location = new System.Drawing.Point(332, 16);
             this.lbl_Nota_quices.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Nota_quices.Name = "lbl_Nota_quices";
             this.lbl_Nota_quices.Size = new System.Drawing.Size(80, 15);
@@ -301,7 +302,7 @@
             // lbl_quiz3
             // 
             this.lbl_quiz3.AutoSize = true;
-            this.lbl_quiz3.Location = new System.Drawing.Point(123, 43);
+            this.lbl_quiz3.Location = new System.Drawing.Point(148, 43);
             this.lbl_quiz3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_quiz3.Name = "lbl_quiz3";
             this.lbl_quiz3.Size = new System.Drawing.Size(52, 15);
@@ -345,7 +346,7 @@
             this.grb_Notas_Tareas.Margin = new System.Windows.Forms.Padding(2);
             this.grb_Notas_Tareas.Name = "grb_Notas_Tareas";
             this.grb_Notas_Tareas.Padding = new System.Windows.Forms.Padding(2);
-            this.grb_Notas_Tareas.Size = new System.Drawing.Size(377, 88);
+            this.grb_Notas_Tareas.Size = new System.Drawing.Size(433, 88);
             this.grb_Notas_Tareas.TabIndex = 12;
             this.grb_Notas_Tareas.TabStop = false;
             this.grb_Notas_Tareas.Text = "Notas Tareas";
@@ -353,7 +354,7 @@
             // txt_nota_tareas
             // 
             this.txt_nota_tareas.Enabled = false;
-            this.txt_nota_tareas.Location = new System.Drawing.Point(321, 42);
+            this.txt_nota_tareas.Location = new System.Drawing.Point(350, 44);
             this.txt_nota_tareas.Name = "txt_nota_tareas";
             this.txt_nota_tareas.Size = new System.Drawing.Size(46, 21);
             this.txt_nota_tareas.Style = MetroFramework.MetroColorStyle.Green;
@@ -363,7 +364,7 @@
             // 
             // txt_tarea4
             // 
-            this.txt_tarea4.Location = new System.Drawing.Point(180, 51);
+            this.txt_tarea4.Location = new System.Drawing.Point(211, 57);
             this.txt_tarea4.MaxLength = 3;
             this.txt_tarea4.Name = "txt_tarea4";
             this.txt_tarea4.Size = new System.Drawing.Size(46, 21);
@@ -372,10 +373,11 @@
             this.txt_tarea4.Text = "0";
             this.txt_tarea4.UseStyleColors = true;
             this.txt_tarea4.TextChanged += new System.EventHandler(this.txt_tarea4_TextChanged);
+            this.txt_tarea4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_tarea4_KeyPress);
             // 
             // txt_tarea3
             // 
-            this.txt_tarea3.Location = new System.Drawing.Point(180, 24);
+            this.txt_tarea3.Location = new System.Drawing.Point(212, 25);
             this.txt_tarea3.MaxLength = 3;
             this.txt_tarea3.Name = "txt_tarea3";
             this.txt_tarea3.Size = new System.Drawing.Size(46, 21);
@@ -384,6 +386,7 @@
             this.txt_tarea3.Text = "0";
             this.txt_tarea3.UseStyleColors = true;
             this.txt_tarea3.TextChanged += new System.EventHandler(this.txt_tarea3_TextChanged);
+            this.txt_tarea3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_tarea3_KeyPress);
             // 
             // txt_tarea2
             // 
@@ -396,6 +399,7 @@
             this.txt_tarea2.Text = "0";
             this.txt_tarea2.UseStyleColors = true;
             this.txt_tarea2.TextChanged += new System.EventHandler(this.txt_tarea2_TextChanged);
+            this.txt_tarea2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_tarea2_KeyPress);
             // 
             // txt_tarea1
             // 
@@ -408,11 +412,12 @@
             this.txt_tarea1.Text = "0";
             this.txt_tarea1.UseStyleColors = true;
             this.txt_tarea1.TextChanged += new System.EventHandler(this.txt_tarea1_TextChanged);
+            this.txt_tarea1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_tarea1_KeyPress);
             // 
             // lbl_Nota_tareas
             // 
             this.lbl_Nota_tareas.AutoSize = true;
-            this.lbl_Nota_tareas.Location = new System.Drawing.Point(243, 42);
+            this.lbl_Nota_tareas.Location = new System.Drawing.Point(332, 16);
             this.lbl_Nota_tareas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Nota_tareas.Name = "lbl_Nota_tareas";
             this.lbl_Nota_tareas.Size = new System.Drawing.Size(80, 15);
@@ -422,7 +427,7 @@
             // lbl_Tarea4
             // 
             this.lbl_Tarea4.AutoSize = true;
-            this.lbl_Tarea4.Location = new System.Drawing.Point(123, 49);
+            this.lbl_Tarea4.Location = new System.Drawing.Point(147, 63);
             this.lbl_Tarea4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Tarea4.Name = "lbl_Tarea4";
             this.lbl_Tarea4.Size = new System.Drawing.Size(59, 15);
@@ -432,7 +437,7 @@
             // lbl_Tarea3
             // 
             this.lbl_Tarea3.AutoSize = true;
-            this.lbl_Tarea3.Location = new System.Drawing.Point(123, 25);
+            this.lbl_Tarea3.Location = new System.Drawing.Point(148, 26);
             this.lbl_Tarea3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Tarea3.Name = "lbl_Tarea3";
             this.lbl_Tarea3.Size = new System.Drawing.Size(59, 15);
@@ -472,14 +477,14 @@
             this.grb_Notas_Examenes_Parciales.Margin = new System.Windows.Forms.Padding(2);
             this.grb_Notas_Examenes_Parciales.Name = "grb_Notas_Examenes_Parciales";
             this.grb_Notas_Examenes_Parciales.Padding = new System.Windows.Forms.Padding(2);
-            this.grb_Notas_Examenes_Parciales.Size = new System.Drawing.Size(377, 68);
+            this.grb_Notas_Examenes_Parciales.Size = new System.Drawing.Size(432, 68);
             this.grb_Notas_Examenes_Parciales.TabIndex = 13;
             this.grb_Notas_Examenes_Parciales.TabStop = false;
             this.grb_Notas_Examenes_Parciales.Text = "Notas Exámenes Parciales";
             // 
             // txt_parcial3
             // 
-            this.txt_parcial3.Location = new System.Drawing.Point(320, 26);
+            this.txt_parcial3.Location = new System.Drawing.Point(349, 26);
             this.txt_parcial3.MaxLength = 3;
             this.txt_parcial3.Name = "txt_parcial3";
             this.txt_parcial3.Size = new System.Drawing.Size(46, 21);
@@ -488,10 +493,11 @@
             this.txt_parcial3.Text = "0";
             this.txt_parcial3.UseStyleColors = true;
             this.txt_parcial3.TextChanged += new System.EventHandler(this.txt_parcial3_TextChanged);
+            this.txt_parcial3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_parcial3_KeyPress);
             // 
             // txt_parcial2
             // 
-            this.txt_parcial2.Location = new System.Drawing.Point(179, 26);
+            this.txt_parcial2.Location = new System.Drawing.Point(204, 24);
             this.txt_parcial2.MaxLength = 3;
             this.txt_parcial2.Name = "txt_parcial2";
             this.txt_parcial2.Size = new System.Drawing.Size(46, 21);
@@ -500,10 +506,11 @@
             this.txt_parcial2.Text = "0";
             this.txt_parcial2.UseStyleColors = true;
             this.txt_parcial2.TextChanged += new System.EventHandler(this.txt_parcial2_TextChanged);
+            this.txt_parcial2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_parcial2_KeyPress);
             // 
             // txt_parcial1
             // 
-            this.txt_parcial1.Location = new System.Drawing.Point(63, 26);
+            this.txt_parcial1.Location = new System.Drawing.Point(70, 26);
             this.txt_parcial1.MaxLength = 3;
             this.txt_parcial1.Name = "txt_parcial1";
             this.txt_parcial1.Size = new System.Drawing.Size(46, 21);
@@ -512,11 +519,12 @@
             this.txt_parcial1.Text = "0";
             this.txt_parcial1.UseStyleColors = true;
             this.txt_parcial1.TextChanged += new System.EventHandler(this.txt_parcial1_TextChanged);
+            this.txt_parcial1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_parcial1_KeyPress);
             // 
             // lbl_Parcial3
             // 
             this.lbl_Parcial3.AutoSize = true;
-            this.lbl_Parcial3.Location = new System.Drawing.Point(259, 30);
+            this.lbl_Parcial3.Location = new System.Drawing.Point(279, 30);
             this.lbl_Parcial3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Parcial3.Name = "lbl_Parcial3";
             this.lbl_Parcial3.Size = new System.Drawing.Size(65, 15);
@@ -526,7 +534,7 @@
             // lbl_Parcial2
             // 
             this.lbl_Parcial2.AutoSize = true;
-            this.lbl_Parcial2.Location = new System.Drawing.Point(122, 32);
+            this.lbl_Parcial2.Location = new System.Drawing.Point(134, 30);
             this.lbl_Parcial2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Parcial2.Name = "lbl_Parcial2";
             this.lbl_Parcial2.Size = new System.Drawing.Size(65, 15);
@@ -536,7 +544,7 @@
             // lbl_Parcial1
             // 
             this.lbl_Parcial1.AutoSize = true;
-            this.lbl_Parcial1.Location = new System.Drawing.Point(0, 30);
+            this.lbl_Parcial1.Location = new System.Drawing.Point(5, 30);
             this.lbl_Parcial1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Parcial1.Name = "lbl_Parcial1";
             this.lbl_Parcial1.Size = new System.Drawing.Size(65, 15);
@@ -553,7 +561,7 @@
             this.grb_Resultado_Final.Margin = new System.Windows.Forms.Padding(2);
             this.grb_Resultado_Final.Name = "grb_Resultado_Final";
             this.grb_Resultado_Final.Padding = new System.Windows.Forms.Padding(2);
-            this.grb_Resultado_Final.Size = new System.Drawing.Size(377, 68);
+            this.grb_Resultado_Final.Size = new System.Drawing.Size(430, 68);
             this.grb_Resultado_Final.TabIndex = 14;
             this.grb_Resultado_Final.TabStop = false;
             this.grb_Resultado_Final.Text = "Resultado Final";
@@ -561,7 +569,7 @@
             // txt_nota_final
             // 
             this.txt_nota_final.Enabled = false;
-            this.txt_nota_final.Location = new System.Drawing.Point(177, 31);
+            this.txt_nota_final.Location = new System.Drawing.Point(202, 31);
             this.txt_nota_final.Name = "txt_nota_final";
             this.txt_nota_final.Size = new System.Drawing.Size(46, 21);
             this.txt_nota_final.Style = MetroFramework.MetroColorStyle.Green;
@@ -573,7 +581,7 @@
             // 
             this.lbl_nota_final.AutoSize = true;
             this.lbl_nota_final.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nota_final.Location = new System.Drawing.Point(97, 31);
+            this.lbl_nota_final.Location = new System.Drawing.Point(122, 31);
             this.lbl_nota_final.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_nota_final.Name = "lbl_nota_final";
             this.lbl_nota_final.Size = new System.Drawing.Size(81, 15);
@@ -596,7 +604,7 @@
             // 
             // btn_CerrarVentana
             // 
-            this.btn_CerrarVentana.Location = new System.Drawing.Point(293, 497);
+            this.btn_CerrarVentana.Location = new System.Drawing.Point(349, 497);
             this.btn_CerrarVentana.Name = "btn_CerrarVentana";
             this.btn_CerrarVentana.Size = new System.Drawing.Size(94, 89);
             this.btn_CerrarVentana.Style = MetroFramework.MetroColorStyle.Green;
@@ -617,7 +625,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(399, 591);
+            this.ClientSize = new System.Drawing.Size(450, 591);
             this.Controls.Add(this.btn_MostrarNota);
             this.Controls.Add(this.btn_CerrarVentana);
             this.Controls.Add(this.grb_Resultado_Final);
