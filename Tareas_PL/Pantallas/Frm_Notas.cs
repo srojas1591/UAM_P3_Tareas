@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using System.Windows.Forms;
 using Tareas_BLL.BLL_Notas;
 using Tareas_DAL.DAL_Notas;
@@ -51,16 +52,20 @@ namespace Tareas_PL.Pantallas
 
         private void btn_MostrarNota_Click(object sender, EventArgs e)
         {
+
+    
             Cls_Notas_BLL Obj_Calculos_BLL = new Cls_Notas_BLL();
             Cls_Notas_DAL Obj_Datos_DAL = new Cls_Notas_DAL();
 
-            // TODO PREVENIR QUE LOS CAMPOS VAYAN VACIOS
 
-            Obj_Datos_DAL.Bporcent_parcial1 = Convert.ToByte(txt_porcent_parcial1.Text);
-            Obj_Datos_DAL.Bporcent_parcial2 = Convert.ToByte(txt_porcent_parcial2.Text);
-            Obj_Datos_DAL.Bporcent_parcial3 = Convert.ToByte(txt_porcent_parcial3.Text);
-            Obj_Datos_DAL.Bporcent_quices = Convert.ToByte(txt_porcent_quices.Text);
-            Obj_Datos_DAL.Bporcent_tarea = Convert.ToByte(txt_porcent_tareas.Text);
+        
+                Obj_Datos_DAL.Bporcent_parcial1 = Convert.ToByte(txt_porcent_parcial1.Text);
+                Obj_Datos_DAL.Bporcent_parcial2 = Convert.ToByte(txt_porcent_parcial2.Text);
+                Obj_Datos_DAL.Bporcent_parcial3 = Convert.ToByte(txt_porcent_parcial3.Text);
+                Obj_Datos_DAL.Bporcent_quices = Convert.ToByte(txt_porcent_quices.Text);
+                Obj_Datos_DAL.Bporcent_tarea = Convert.ToByte(txt_porcent_tareas.Text);
+            
+            
 
             Obj_Datos_DAL.bquiz1 = Convert.ToByte(txt_quiz1.Text);
             Obj_Datos_DAL.bquiz2 = Convert.ToByte(txt_quiz2.Text);
@@ -74,6 +79,8 @@ namespace Tareas_PL.Pantallas
             Obj_Datos_DAL.bparcial1 = Convert.ToByte(txt_parcial1.Text);
             Obj_Datos_DAL.bparcial2 = Convert.ToByte(txt_parcial2.Text);
             Obj_Datos_DAL.bparcial3 = Convert.ToByte(txt_parcial3.Text);
+
+
 
             if (Obj_Datos_DAL.Bporcent_tarea + Obj_Datos_DAL.Bporcent_quices + Obj_Datos_DAL.Bporcent_parcial1 + Obj_Datos_DAL.Bporcent_parcial2 + Obj_Datos_DAL.Bporcent_parcial3 > 100)
             {
@@ -167,6 +174,7 @@ namespace Tareas_PL.Pantallas
                 Convert.ToInt32(txt_porcent_tareas.Text + e.KeyChar) >= 101 ||
                 txt_porcent_tareas.Text == "0") && c != '\b')
                 e.Handled = true;
+            
         }
 
         private void txt_porcent_parcial1_KeyPress(object sender, KeyPressEventArgs e)
@@ -176,6 +184,7 @@ namespace Tareas_PL.Pantallas
                 Convert.ToInt32(txt_porcent_parcial1.Text + e.KeyChar) >= 101 ||
                 txt_porcent_parcial1.Text == "0") && c != '\b')
                 e.Handled = true;
+            
         }
 
         private void txt_porcent_quices_KeyPress(object sender, KeyPressEventArgs e)
@@ -301,75 +310,244 @@ namespace Tareas_PL.Pantallas
         #region TextChanged
         private void txt_porcent_tareas_TextChanged(object sender, EventArgs e)
         {
+
+            if (string.IsNullOrWhiteSpace(txt_porcent_tareas.Text))
+            {
+                btn_MostrarNota.Enabled = false;
+                lbl_Tareas.ForeColor = Color.Red;
+                MessageBox.Show("No deje campos vacios", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+            }
+            else
+            {
+                lbl_Tareas.ForeColor = Color.Black;
+                btn_MostrarNota.Enabled = true;
+                
+            }
+
         }
 
         private void txt_porcent_quices_TextChanged(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txt_porcent_quices.Text))
+            {
+                btn_MostrarNota.Enabled = false;
+                lbl_Quices.ForeColor = Color.Red;
+                MessageBox.Show("No deje campos vacios", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                lbl_Quices.ForeColor = Color.Black;
+                btn_MostrarNota.Enabled = true;
 
+            }
         }
 
         private void txt_porcent_parcial1_TextChanged(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txt_porcent_parcial1.Text))
+            {
+                btn_MostrarNota.Enabled = false;
+                lbl_pn1_Parcial1.ForeColor = Color.Red;
+                MessageBox.Show("No deje campos vacios", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                lbl_pn1_Parcial1.ForeColor = Color.Black;
+                btn_MostrarNota.Enabled = true;
 
+            }
         }
 
         private void txt_porcent_parcial2_TextChanged(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txt_porcent_parcial2.Text))
+            {
+                btn_MostrarNota.Enabled = false;
+                lbl_pn1_Parcial2.ForeColor = Color.Red;
+                MessageBox.Show("No deje campos vacios", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                lbl_pn1_Parcial2.ForeColor = Color.Black;
+                btn_MostrarNota.Enabled = true;
 
+            }
         }
 
         private void txt_porcent_parcial3_TextChanged(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txt_porcent_parcial3.Text))
+            {
+                btn_MostrarNota.Enabled = false;
+                lbl_pn1_Parcial3.ForeColor = Color.Red;
+                MessageBox.Show("No deje campos vacios", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                lbl_pn1_Parcial3.ForeColor = Color.Black;
+                btn_MostrarNota.Enabled = true;
 
+            }
         }
 
         private void txt_quiz1_TextChanged(object sender, EventArgs e)
         {
-           
+            if (string.IsNullOrWhiteSpace(txt_quiz1.Text))
+            {
+                btn_MostrarNota.Enabled = false;
+                lbl_quiz1.ForeColor = Color.Red;
+                MessageBox.Show("No deje campos vacios", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                lbl_quiz1.ForeColor = Color.Black;
+                btn_MostrarNota.Enabled = true;
+
+            }
         }
 
         private void txt_quiz2_TextChanged(object sender, EventArgs e)
         {
-            
+            if (string.IsNullOrWhiteSpace(txt_quiz2.Text))
+            {
+                btn_MostrarNota.Enabled = false;
+                lbl_quiz2.ForeColor = Color.Red;
+                MessageBox.Show("No deje campos vacios", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                lbl_quiz2.ForeColor = Color.Black;
+                btn_MostrarNota.Enabled = true;
+
+            }
         }
 
         private void txt_quiz3_TextChanged(object sender, EventArgs e)
         {
-            
+            if (string.IsNullOrWhiteSpace(txt_quiz3.Text))
+            {
+                btn_MostrarNota.Enabled = false;
+                lbl_quiz3.ForeColor = Color.Red;
+                MessageBox.Show("No deje campos vacios", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                lbl_quiz3.ForeColor = Color.Black;
+                btn_MostrarNota.Enabled = true;
+
+            }
         }
 
         private void txt_tarea1_TextChanged(object sender, EventArgs e)
         {
-            
+            if (string.IsNullOrWhiteSpace(txt_tarea1.Text))
+            {
+                btn_MostrarNota.Enabled = false;
+                lbl_Tarea1.ForeColor = Color.Red;
+                MessageBox.Show("No deje campos vacios", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                lbl_Tarea1.ForeColor = Color.Black;
+                btn_MostrarNota.Enabled = true;
+
+            }
         }
 
         private void txt_tarea2_TextChanged(object sender, EventArgs e)
         {
-           
+            if(string.IsNullOrWhiteSpace(txt_tarea2.Text))
+            {
+                btn_MostrarNota.Enabled = false;
+                lbl_Tarea2.ForeColor = Color.Red;
+                MessageBox.Show("No deje campos vacios", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                lbl_Tarea2.ForeColor = Color.Black;
+                btn_MostrarNota.Enabled = true;
+
+            }
         }
 
         private void txt_tarea3_TextChanged(object sender, EventArgs e)
         {
-            
+            if (string.IsNullOrWhiteSpace(txt_tarea3.Text))
+            {
+                btn_MostrarNota.Enabled = false;
+                lbl_Tarea3.ForeColor = Color.Red;
+                MessageBox.Show("No deje campos vacios", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                lbl_Tarea3.ForeColor = Color.Black;
+                btn_MostrarNota.Enabled = true;
+
+            }
         }
 
         private void txt_tarea4_TextChanged(object sender, EventArgs e)
         {
-            
+            if (string.IsNullOrWhiteSpace(txt_tarea4.Text))
+            {
+                btn_MostrarNota.Enabled = false;
+                lbl_Tarea4.ForeColor = Color.Red;
+                MessageBox.Show("No deje campos vacios", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                lbl_Tarea4.ForeColor = Color.Black;
+                btn_MostrarNota.Enabled = true;
+
+            }
         }
 
         private void txt_parcial1_TextChanged(object sender, EventArgs e)
         {
-           
+            if (string.IsNullOrWhiteSpace(txt_parcial1.Text))
+            {
+                btn_MostrarNota.Enabled = false;
+                lbl_Parcial1.ForeColor = Color.Red;
+                MessageBox.Show("No deje campos vacios", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                lbl_Parcial1.ForeColor = Color.Black;
+                btn_MostrarNota.Enabled = true;
+
+            }
         }
 
         private void txt_parcial2_TextChanged(object sender, EventArgs e)
         {
-            
+            if (string.IsNullOrWhiteSpace(txt_parcial2.Text))
+            {
+                btn_MostrarNota.Enabled = false;
+                lbl_Parcial2.ForeColor = Color.Red;
+                MessageBox.Show("No deje campos vacios", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                lbl_Parcial2.ForeColor = Color.Black;
+                btn_MostrarNota.Enabled = true;
+
+            }
         }
 
         private void txt_parcial3_TextChanged(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txt_parcial3.Text))
+            {
+                btn_MostrarNota.Enabled = false;
+                lbl_Parcial3.ForeColor = Color.Red;
+                MessageBox.Show("No deje campos vacios", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                lbl_Parcial3.ForeColor = Color.Black;
+                btn_MostrarNota.Enabled = true;
+
+            }
         }
 
         #endregion

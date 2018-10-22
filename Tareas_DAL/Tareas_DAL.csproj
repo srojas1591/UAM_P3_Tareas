@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL_Arreglo\Cls_Arreglo_DAL.cs" />
+    <Compile Include="DAL_Contador\Cls_Contador_DAL.cs" />
     <Compile Include="DAL_Ecuacion\Cls_Ecuacion_DAL.cs" />
     <Compile Include="DAL_Ecuacion_Cuadratica\Cls_Ecuacion_Cuadratica_DAL.cs" />
     <Compile Include="DAL_Notas\Cls_Notas_DAL.cs" />
@@ -49,7 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DAL_Cifras\" />
-    <Folder Include="DAL_Contador\" />
     <Folder Include="DAL_Fecha\" />
     <Folder Include="DAL_Rifa\" />
     <Folder Include="DAL_Tabla\" />

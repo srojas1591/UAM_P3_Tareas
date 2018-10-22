@@ -126,6 +126,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Pantallas\Frm_Contador.resx">
+      <DependentUpon>Frm_Contador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\Frm_Ecuaciones.resx">
       <DependentUpon>Frm_Ecuaciones.cs</DependentUpon>
     </EmbeddedResource>

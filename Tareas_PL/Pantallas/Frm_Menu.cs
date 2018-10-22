@@ -65,5 +65,11 @@ namespace Tareas_PL.Pantallas
             ObjForm.ShowDialog();
 
         }
+
+        private void btn_Cronometro_Click(object sender, EventArgs e)
+        {
+            Frm_Contador ObjPant = new Frm_Contador();
+            ObjPant.ShowDialog();
+        }
     }
 }

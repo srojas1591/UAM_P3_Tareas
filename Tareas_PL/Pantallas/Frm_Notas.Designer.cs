@@ -35,11 +35,11 @@
             this.txt_porcent_parcial1 = new MetroFramework.Controls.MetroTextBox();
             this.txt_porcent_quices = new MetroFramework.Controls.MetroTextBox();
             this.txt_porcent_tareas = new MetroFramework.Controls.MetroTextBox();
-            this.Txt_pn1_Parcial3 = new System.Windows.Forms.Label();
-            this.Txt_pn1_Parcial2 = new System.Windows.Forms.Label();
-            this.Txt_pn1_Parcial1 = new System.Windows.Forms.Label();
-            this.Txt_Quices = new System.Windows.Forms.Label();
-            this.Txt_Tareas = new System.Windows.Forms.Label();
+            this.lbl_pn1_Parcial3 = new System.Windows.Forms.Label();
+            this.lbl_pn1_Parcial2 = new System.Windows.Forms.Label();
+            this.lbl_pn1_Parcial1 = new System.Windows.Forms.Label();
+            this.lbl_Quices = new System.Windows.Forms.Label();
+            this.lbl_Tareas = new System.Windows.Forms.Label();
             this.grb_Notas_Quices = new System.Windows.Forms.GroupBox();
             this.txt_nota_quices = new MetroFramework.Controls.MetroTextBox();
             this.txt_quiz3 = new MetroFramework.Controls.MetroTextBox();
@@ -89,11 +89,11 @@
             this.grb_Porcentajes_Evaluacion.Controls.Add(this.txt_porcent_parcial1);
             this.grb_Porcentajes_Evaluacion.Controls.Add(this.txt_porcent_quices);
             this.grb_Porcentajes_Evaluacion.Controls.Add(this.txt_porcent_tareas);
-            this.grb_Porcentajes_Evaluacion.Controls.Add(this.Txt_pn1_Parcial3);
-            this.grb_Porcentajes_Evaluacion.Controls.Add(this.Txt_pn1_Parcial2);
-            this.grb_Porcentajes_Evaluacion.Controls.Add(this.Txt_pn1_Parcial1);
-            this.grb_Porcentajes_Evaluacion.Controls.Add(this.Txt_Quices);
-            this.grb_Porcentajes_Evaluacion.Controls.Add(this.Txt_Tareas);
+            this.grb_Porcentajes_Evaluacion.Controls.Add(this.lbl_pn1_Parcial3);
+            this.grb_Porcentajes_Evaluacion.Controls.Add(this.lbl_pn1_Parcial2);
+            this.grb_Porcentajes_Evaluacion.Controls.Add(this.lbl_pn1_Parcial1);
+            this.grb_Porcentajes_Evaluacion.Controls.Add(this.lbl_Quices);
+            this.grb_Porcentajes_Evaluacion.Controls.Add(this.lbl_Tareas);
             this.grb_Porcentajes_Evaluacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grb_Porcentajes_Evaluacion.Location = new System.Drawing.Point(11, 62);
             this.grb_Porcentajes_Evaluacion.Margin = new System.Windows.Forms.Padding(2);
@@ -158,6 +158,7 @@
             // 
             // txt_porcent_tareas
             // 
+            this.txt_porcent_tareas.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_porcent_tareas.Location = new System.Drawing.Point(62, 28);
             this.txt_porcent_tareas.MaxLength = 3;
             this.txt_porcent_tareas.Name = "txt_porcent_tareas";
@@ -169,55 +170,55 @@
             this.txt_porcent_tareas.TextChanged += new System.EventHandler(this.txt_porcent_tareas_TextChanged);
             this.txt_porcent_tareas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_porcent_tareas_KeyPress);
             // 
-            // Txt_pn1_Parcial3
+            // lbl_pn1_Parcial3
             // 
-            this.Txt_pn1_Parcial3.AutoSize = true;
-            this.Txt_pn1_Parcial3.Location = new System.Drawing.Point(279, 44);
-            this.Txt_pn1_Parcial3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Txt_pn1_Parcial3.Name = "Txt_pn1_Parcial3";
-            this.Txt_pn1_Parcial3.Size = new System.Drawing.Size(65, 15);
-            this.Txt_pn1_Parcial3.TabIndex = 15;
-            this.Txt_pn1_Parcial3.Text = "Parcial#3 :";
+            this.lbl_pn1_Parcial3.AutoSize = true;
+            this.lbl_pn1_Parcial3.Location = new System.Drawing.Point(279, 44);
+            this.lbl_pn1_Parcial3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_pn1_Parcial3.Name = "lbl_pn1_Parcial3";
+            this.lbl_pn1_Parcial3.Size = new System.Drawing.Size(65, 15);
+            this.lbl_pn1_Parcial3.TabIndex = 15;
+            this.lbl_pn1_Parcial3.Text = "Parcial#3 :";
             // 
-            // Txt_pn1_Parcial2
+            // lbl_pn1_Parcial2
             // 
-            this.Txt_pn1_Parcial2.AutoSize = true;
-            this.Txt_pn1_Parcial2.Location = new System.Drawing.Point(138, 63);
-            this.Txt_pn1_Parcial2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Txt_pn1_Parcial2.Name = "Txt_pn1_Parcial2";
-            this.Txt_pn1_Parcial2.Size = new System.Drawing.Size(65, 15);
-            this.Txt_pn1_Parcial2.TabIndex = 14;
-            this.Txt_pn1_Parcial2.Text = "Parcial#2 :";
+            this.lbl_pn1_Parcial2.AutoSize = true;
+            this.lbl_pn1_Parcial2.Location = new System.Drawing.Point(138, 63);
+            this.lbl_pn1_Parcial2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_pn1_Parcial2.Name = "lbl_pn1_Parcial2";
+            this.lbl_pn1_Parcial2.Size = new System.Drawing.Size(65, 15);
+            this.lbl_pn1_Parcial2.TabIndex = 14;
+            this.lbl_pn1_Parcial2.Text = "Parcial#2 :";
             // 
-            // Txt_pn1_Parcial1
+            // lbl_pn1_Parcial1
             // 
-            this.Txt_pn1_Parcial1.AutoSize = true;
-            this.Txt_pn1_Parcial1.Location = new System.Drawing.Point(138, 28);
-            this.Txt_pn1_Parcial1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Txt_pn1_Parcial1.Name = "Txt_pn1_Parcial1";
-            this.Txt_pn1_Parcial1.Size = new System.Drawing.Size(65, 15);
-            this.Txt_pn1_Parcial1.TabIndex = 13;
-            this.Txt_pn1_Parcial1.Text = "Parcial#1 :";
+            this.lbl_pn1_Parcial1.AutoSize = true;
+            this.lbl_pn1_Parcial1.Location = new System.Drawing.Point(138, 28);
+            this.lbl_pn1_Parcial1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_pn1_Parcial1.Name = "lbl_pn1_Parcial1";
+            this.lbl_pn1_Parcial1.Size = new System.Drawing.Size(65, 15);
+            this.lbl_pn1_Parcial1.TabIndex = 13;
+            this.lbl_pn1_Parcial1.Text = "Parcial#1 :";
             // 
-            // Txt_Quices
+            // lbl_Quices
             // 
-            this.Txt_Quices.AutoSize = true;
-            this.Txt_Quices.Location = new System.Drawing.Point(11, 62);
-            this.Txt_Quices.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Txt_Quices.Name = "Txt_Quices";
-            this.Txt_Quices.Size = new System.Drawing.Size(54, 15);
-            this.Txt_Quices.TabIndex = 12;
-            this.Txt_Quices.Text = "Quices : ";
+            this.lbl_Quices.AutoSize = true;
+            this.lbl_Quices.Location = new System.Drawing.Point(11, 62);
+            this.lbl_Quices.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Quices.Name = "lbl_Quices";
+            this.lbl_Quices.Size = new System.Drawing.Size(54, 15);
+            this.lbl_Quices.TabIndex = 12;
+            this.lbl_Quices.Text = "Quices : ";
             // 
-            // Txt_Tareas
+            // lbl_Tareas
             // 
-            this.Txt_Tareas.AutoSize = true;
-            this.Txt_Tareas.Location = new System.Drawing.Point(10, 28);
-            this.Txt_Tareas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Txt_Tareas.Name = "Txt_Tareas";
-            this.Txt_Tareas.Size = new System.Drawing.Size(54, 15);
-            this.Txt_Tareas.TabIndex = 10;
-            this.Txt_Tareas.Text = "Tareas : ";
+            this.lbl_Tareas.AutoSize = true;
+            this.lbl_Tareas.Location = new System.Drawing.Point(10, 28);
+            this.lbl_Tareas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Tareas.Name = "lbl_Tareas";
+            this.lbl_Tareas.Size = new System.Drawing.Size(54, 15);
+            this.lbl_Tareas.TabIndex = 10;
+            this.lbl_Tareas.Text = "Tareas : ";
             // 
             // grb_Notas_Quices
             // 
@@ -643,6 +644,7 @@
             this.Theme = MetroFramework.MetroThemeStyle.Light;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_Notas_FormClosed);
             this.Load += new System.EventHandler(this.Frm_Notas_Load);
+            this.TextChanged += new System.EventHandler(this.txt_porcent_tareas_TextChanged);
             this.grb_Porcentajes_Evaluacion.ResumeLayout(false);
             this.grb_Porcentajes_Evaluacion.PerformLayout();
             this.grb_Notas_Quices.ResumeLayout(false);
@@ -661,11 +663,11 @@
         #endregion
 
         private System.Windows.Forms.GroupBox grb_Porcentajes_Evaluacion;
-        private System.Windows.Forms.Label Txt_pn1_Parcial3;
-        private System.Windows.Forms.Label Txt_pn1_Parcial2;
-        private System.Windows.Forms.Label Txt_pn1_Parcial1;
-        private System.Windows.Forms.Label Txt_Quices;
-        private System.Windows.Forms.Label Txt_Tareas;
+        private System.Windows.Forms.Label lbl_pn1_Parcial3;
+        private System.Windows.Forms.Label lbl_pn1_Parcial2;
+        private System.Windows.Forms.Label lbl_pn1_Parcial1;
+        private System.Windows.Forms.Label lbl_Quices;
+        private System.Windows.Forms.Label lbl_Tareas;
         private System.Windows.Forms.GroupBox grb_Notas_Quices;
         private System.Windows.Forms.Label lbl_Nota_quices;
         private System.Windows.Forms.Label lbl_quiz3;
